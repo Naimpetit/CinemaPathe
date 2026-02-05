@@ -102,7 +102,7 @@ namespace CinemaPathe
 
         private void btnfilms_Click(object sender, EventArgs e)
         {
-            new Form4().Show();
+            new Form3().Show();
         }
     }
 }
