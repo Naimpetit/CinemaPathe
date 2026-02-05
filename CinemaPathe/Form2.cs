@@ -40,7 +40,7 @@ namespace CinemaPathe
                 existenreg = drr.Read();
             }
             drr.Close();
-            cnn.Close();
+            cnn.Close(); cnn.Close();
         }
 
         private void CboGen_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace CinemaPathe
                 existenreg = drr.Read();
             }
             drr.Close();
-            cnn.Close();
+            cnn.Close(); cnn.Close();
         }
        
         private void BtnCom_Click(object sender, EventArgs e) // -- Fonction principale, le reste sont des magouilles

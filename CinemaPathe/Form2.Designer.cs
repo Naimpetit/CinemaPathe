@@ -221,7 +221,7 @@
             this.Mode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Mode.BackColor = System.Drawing.Color.Transparent;
+            this.Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(196)))), ((int)(((byte)(40)))));
             this.Mode.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.Mode.Location = new System.Drawing.Point(56, 264);
             this.Mode.Name = "Mode";
