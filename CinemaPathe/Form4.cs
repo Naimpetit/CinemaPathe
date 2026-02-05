@@ -64,6 +64,7 @@ namespace CinemaPathe
 
 
             listView.Items.Clear();
+            //test
             //(algorithme avec 2 boucles imbriquées) :
             //faire une requête simple pour récupérer les film.
             //A chaque film affiché, écrire une 2ème requête imbriquée qui récupère ses genres et qui les affiche dans une colonne.
