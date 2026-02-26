@@ -27,13 +27,14 @@ namespace CinemaPathe
             SoundPlayer BootUpSound = new SoundPlayer(Properties.Resources.startup);
             BootUpSound.Play();
 
+           
 
             OdbcConnection cnn = new OdbcConnection();
             OdbcCommand cmd = new OdbcCommand();
             OdbcDataReader drr;
             Boolean existenreg;
            
-            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
             cnn.Open();
             cmd.CommandText = "select nogenre, libgenre from genre";
             cmd.Connection = cnn;
@@ -54,7 +55,7 @@ namespace CinemaPathe
             OdbcDataReader drr2;
             Boolean existenreg2;
 
-            cnn2.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+            cnn2.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
             cnn2.Open();
             cmd2.CommandText = "select nosalle, nbplaces from salle";
             cmd2.Connection = cnn2;
@@ -84,11 +85,12 @@ namespace CinemaPathe
             if (progressBar1.Value == 1)
             {
                 timer1.Stop();
+                //Task.Delay(3000).Wait();
                 btnGenre.Visible = true;
                 listView1.Visible = true;
                 BtnSalle.Visible = true;
+                BtnPr.Visible = true;
                 listView2.Visible = true;
-                btnfilms.Visible = true;
                 progressBar1.Visible = false;
                 LogoMid.Visible = false;
                 TitleStart.Visible = false;
@@ -100,9 +102,14 @@ namespace CinemaPathe
             new Form3().Show();
         }
 
-        private void btnfilms_Click(object sender, EventArgs e)
+        private void BtnPr_Click(object sender, EventArgs e)
         {
-            new Form3().Show();
+            new Option_Projection().Show();
+        }
+
+        private void btform7_Click(object sender, EventArgs e)
+        {
+            new Form7().Show();
         }
     }
 }

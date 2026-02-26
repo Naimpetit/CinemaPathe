@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CinemaPathe
 {
-    public partial class Form3 : Form
+    public partial class Form7 : Form
     {
-        public Form3()
+        public Form7()
         {
             InitializeComponent();
         }
@@ -27,10 +28,10 @@ namespace CinemaPathe
             OdbcConnection cnn = new OdbcConnection();
             OdbcCommand cmd = new OdbcCommand();
             OdbcCommand cmd2 = new OdbcCommand();
-            OdbcDataReader drr,drr2;
+            OdbcDataReader drr, drr2;
             Boolean existenreg, existenreg2;
 
-            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
             cnn.Open();
             cmd.CommandText = "select libgenre,nogenre from genre";
             cmd.Connection = cnn;
@@ -46,8 +47,8 @@ namespace CinemaPathe
             cnn.Close();
 
 
-            
-            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+
+            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
             cnn.Open();
             cmd.CommandText = "select libpublic,nopublic from public";
             cmd.Connection = cnn;
@@ -68,7 +69,7 @@ namespace CinemaPathe
             //(algorithme avec 2 boucles imbriquées) :
             //faire une requête simple pour récupérer les film.
             //A chaque film affiché, écrire une 2ème requête imbriquée qui récupère ses genres et qui les affiche dans une colonne.
-            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
             cnn.Open();
             cmd.CommandText = "select titre, libpublic, nofilm from film f inner join public p on f.nopublic=p.nopublic ";
             cmd.Connection = cnn;
@@ -159,19 +160,19 @@ namespace CinemaPathe
             OdbcDataReader drr;
             Boolean existenreg;
 
-            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
             cnn.Open();
             cmd.CommandText = "insert into film values('',?,'','','','','','',?)";
             cmd.Parameters.AddWithValue("", TxtBoxFilm.Text);
             cmd.Parameters.AddWithValue("", lespublics[Cbopublic.SelectedIndex]);
             cmd.Connection = cnn;
-            drr = cmd.ExecuteReader();  
+            drr = cmd.ExecuteReader();
             existenreg = drr.Read();
             drr.Close();
             cnn.Close();
 
 
-            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
             cnn.Open();
             cmd.CommandText = "select max(nofilm) from film";
             cmd.Connection = cnn;
@@ -184,7 +185,7 @@ namespace CinemaPathe
                     cmd2.Parameters.Clear();
                     cmd2.CommandText = "insert into concerner (nofilm , nogenre) values ( ? ,?)";
                     cmd2.Parameters.AddWithValue("", noderfilm);
-                    cmd2.Parameters.AddWithValue("", lesgenres[i]); 
+                    cmd2.Parameters.AddWithValue("", lesgenres[i]);
                     cmd2.Connection = cnn;
                     cmd2.ExecuteNonQuery();
                 }

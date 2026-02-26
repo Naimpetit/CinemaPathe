@@ -31,7 +31,7 @@ namespace CinemaPathe
             OdbcDataReader drr;
             Boolean existenreg;
 
-            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
             cnn.Open();
             cmd.CommandText = "select nosalle, dateproj, heureproj, titre, projection.noproj  from film inner join projeter on projeter.nofilm=film.nofilm " +
                 "inner join projection on projection.noproj=projeter.noproj group by nosalle, dateproj, heureproj, titre, projection.noproj";
@@ -62,7 +62,7 @@ namespace CinemaPathe
             OdbcDataReader drr1;
             Boolean existenreg1;
 
-            cnn1.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+            cnn1.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
             cnn1.Open();
             cmd1.CommandText = "select titre from film";
 
@@ -86,7 +86,7 @@ namespace CinemaPathe
             OdbcDataReader drr2;
             Boolean existenreg2;
 
-            cnn2.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+            cnn2.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
             cnn2.Open();
             cmd2.CommandText = "select nosalle, nbplaces from salle";
             cmd2.Connection = cnn2;
@@ -110,7 +110,7 @@ namespace CinemaPathe
                 OdbcDataReader drr;
                 Boolean existenreg;
 
-                cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+                cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
                 cnn.Open();
                 cmd.CommandText = "select * from film where titre = ?";
                 cmd.Parameters.Clear();
@@ -149,7 +149,7 @@ namespace CinemaPathe
                 OdbcCommand cmd = new OdbcCommand();
                 Boolean existenreg;
 
-                cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+                cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
                 cnn.Open();
                 cmd.CommandText = "insert into projection values('', ?,?,?,?,?)";
                 cmd.Parameters.Clear();
@@ -166,7 +166,7 @@ namespace CinemaPathe
                 OdbcCommand cmd2 = new OdbcCommand();
               
 
-                cnn2.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+                cnn2.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
                 cnn2.Open();
                 cmd2.CommandText = "insert into avoirlieu values(?,?)";
                 cmd2.Parameters.Clear();
@@ -180,7 +180,7 @@ namespace CinemaPathe
                 OdbcConnection cnn3 = new OdbcConnection();
                 OdbcCommand cmd3 = new OdbcCommand();
 
-                cnn3.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+                cnn3.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
                 cnn3.Open();
                 cmd3.CommandText = "insert into projeter values(?,?)";
                 cmd3.Parameters.Clear();
