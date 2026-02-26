@@ -27,7 +27,6 @@ namespace CinemaPathe
             SoundPlayer BootUpSound = new SoundPlayer(Properties.Resources.startup);
             BootUpSound.Play();
 
-           
 
             OdbcConnection cnn = new OdbcConnection();
             OdbcCommand cmd = new OdbcCommand();
@@ -85,12 +84,11 @@ namespace CinemaPathe
             if (progressBar1.Value == 1)
             {
                 timer1.Stop();
-                //Task.Delay(3000).Wait();
                 btnGenre.Visible = true;
                 listView1.Visible = true;
                 BtnSalle.Visible = true;
-                BtnPr.Visible = true;
                 listView2.Visible = true;
+                btnfilms.Visible = true;
                 progressBar1.Visible = false;
                 LogoMid.Visible = false;
                 TitleStart.Visible = false;
@@ -102,9 +100,9 @@ namespace CinemaPathe
             new Form3().Show();
         }
 
-        private void BtnPr_Click(object sender, EventArgs e)
+        private void btnfilms_Click(object sender, EventArgs e)
         {
-            new Form4().Show();
+            new Form3().Show();
         }
     }
 }
