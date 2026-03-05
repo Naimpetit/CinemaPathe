@@ -110,12 +110,13 @@ namespace CinemaPathe
         private void btform7_Click(object sender, EventArgs e)
         {
             new Form7().Show();
+            
         }
 
         private void btpdf_Click(object sender, EventArgs e)
         {
             new Form6().Show();
-            //test
+            
         }
     }
 }
