@@ -104,7 +104,7 @@ namespace CinemaPathe
 
         private void BtnPr_Click(object sender, EventArgs e)
         {
-            new Form4().Show();
+            new Option_Projection().Show();
         }
     }
 }

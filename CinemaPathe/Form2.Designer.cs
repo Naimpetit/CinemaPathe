@@ -133,7 +133,7 @@
             this.BtnCom.Name = "BtnCom";
             this.BtnCom.Size = new System.Drawing.Size(75, 23);
             this.BtnCom.TabIndex = 8;
-            this.BtnCom.Text = "Comfirmer";
+            this.BtnCom.Text = "Confirmer";
             this.BtnCom.UseVisualStyleBackColor = false;
             this.BtnCom.Visible = false;
             this.BtnCom.Click += new System.EventHandler(this.BtnCom_Click);
