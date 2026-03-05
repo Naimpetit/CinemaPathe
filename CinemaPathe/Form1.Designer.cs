@@ -43,6 +43,8 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BtnSalle = new System.Windows.Forms.Button();
             this.BtnPr = new System.Windows.Forms.Button();
+            this.btform7 = new System.Windows.Forms.Button();
+            this.btpdf = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LogoMid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -173,6 +175,34 @@
             this.BtnPr.Visible = false;
             this.BtnPr.Click += new System.EventHandler(this.BtnPr_Click);
             // 
+            // btform7
+            // 
+            this.btform7.AutoSize = true;
+            this.btform7.BackColor = System.Drawing.Color.Goldenrod;
+            this.btform7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btform7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btform7.Location = new System.Drawing.Point(52, 440);
+            this.btform7.Name = "btform7";
+            this.btform7.Size = new System.Drawing.Size(107, 23);
+            this.btform7.TabIndex = 9;
+            this.btform7.Text = "Visu films";
+            this.btform7.UseVisualStyleBackColor = false;
+            this.btform7.Click += new System.EventHandler(this.btform7_Click);
+            // 
+            // btpdf
+            // 
+            this.btpdf.AutoSize = true;
+            this.btpdf.BackColor = System.Drawing.Color.Goldenrod;
+            this.btpdf.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btpdf.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btpdf.Location = new System.Drawing.Point(260, 440);
+            this.btpdf.Name = "btpdf";
+            this.btpdf.Size = new System.Drawing.Size(107, 23);
+            this.btpdf.TabIndex = 10;
+            this.btpdf.Text = "PDF projections";
+            this.btpdf.UseVisualStyleBackColor = false;
+            this.btpdf.Click += new System.EventHandler(this.btpdf_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,6 +210,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(196)))), ((int)(((byte)(40)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(614, 565);
+            this.Controls.Add(this.btpdf);
+            this.Controls.Add(this.btform7);
             this.Controls.Add(this.BtnPr);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.BtnSalle);
@@ -213,6 +245,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button BtnSalle;
         private System.Windows.Forms.Button BtnPr;
+        private System.Windows.Forms.Button btform7;
+        private System.Windows.Forms.Button btpdf;
     }
 }
 

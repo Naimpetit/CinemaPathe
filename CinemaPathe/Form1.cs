@@ -34,7 +34,7 @@ namespace CinemaPathe
             OdbcDataReader drr;
             Boolean existenreg;
            
-            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
             cnn.Open();
             cmd.CommandText = "select nogenre, libgenre from genre";
             cmd.Connection = cnn;
@@ -55,7 +55,7 @@ namespace CinemaPathe
             OdbcDataReader drr2;
             Boolean existenreg2;
 
-            cnn2.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+            cnn2.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
             cnn2.Open();
             cmd2.CommandText = "select nosalle, nbplaces from salle";
             cmd2.Connection = cnn2;

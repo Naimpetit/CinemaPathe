@@ -125,7 +125,7 @@
             this.pictureBoxFilm.Image = global::CinemaPathe.Properties.Resources.logo2;
             this.pictureBoxFilm.Location = new System.Drawing.Point(574, 88);
             this.pictureBoxFilm.Name = "pictureBoxFilm";
-            this.pictureBoxFilm.Size = new System.Drawing.Size(197, 197);
+            this.pictureBoxFilm.Size = new System.Drawing.Size(200, 266);
             this.pictureBoxFilm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxFilm.TabIndex = 23;
             this.pictureBoxFilm.TabStop = false;

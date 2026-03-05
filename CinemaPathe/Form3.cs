@@ -26,7 +26,7 @@ namespace CinemaPathe
             OdbcDataReader drr;
             Boolean existenreg;
 
-            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
             cnn.Open();
             cmd.CommandText = "select nosalle, nbplaces from salle";
             cmd.Connection = cnn;
@@ -126,7 +126,7 @@ namespace CinemaPathe
                 OdbcConnection cnn = new OdbcConnection();
                 OdbcCommand cmd = new OdbcCommand();
                 Boolean existenreg;
-                cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+                cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
                 cnn.Open();
                 cmd.CommandText = "insert into salle values(?, ?)";
                 cmd.Parameters.AddWithValue("", TxtBoxNom.Text);
@@ -165,7 +165,7 @@ namespace CinemaPathe
                 OdbcConnection cnn = new OdbcConnection();
                 OdbcCommand cmd = new OdbcCommand();
                 Boolean existenreg;
-                cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+                cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
                 cnn.Open();
                 cmd.CommandText = "delete from salle where nosalle = ?";
                 cmd.Parameters.AddWithValue("", CboSalle.SelectedItem);
@@ -203,7 +203,7 @@ namespace CinemaPathe
                 OdbcConnection cnn = new OdbcConnection();
                 OdbcCommand cmd = new OdbcCommand();
                 Boolean existenreg;
-                cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+                cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
                 cnn.Open();
                 cmd.CommandText = "update salle set nosalle = ?,nbplaces = ?  where nosalle = ?";
                 cmd.Parameters.AddWithValue("", TxtBoxNom.Text);

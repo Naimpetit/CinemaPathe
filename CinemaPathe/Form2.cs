@@ -25,7 +25,7 @@ namespace CinemaPathe
             OdbcDataReader drr;
             Boolean existenreg;
           
-            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
             cnn.Open();
             cmd.CommandText = "select nogenre, libgenre from genre";
             cmd.Connection = cnn;
@@ -40,7 +40,7 @@ namespace CinemaPathe
                 existenreg = drr.Read();
             }
             drr.Close();
-            cnn.Close();
+            cnn.Close(); cnn.Close();
         }
 
         private void CboGen_SelectedIndexChanged(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace CinemaPathe
             OdbcCommand cmd = new OdbcCommand();
             OdbcDataReader drr;
             Boolean existenreg;
-            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+            cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
             cnn.Open();
             cmd.CommandText = "select nogenre, libgenre from genre where libgenre = ?";
             cmd.Parameters.AddWithValue("", CboGen.SelectedItem);
@@ -63,7 +63,7 @@ namespace CinemaPathe
                 existenreg = drr.Read();
             }
             drr.Close();
-            cnn.Close();
+            cnn.Close(); cnn.Close();
         }
        
         private void BtnCom_Click(object sender, EventArgs e) // -- Fonction principale, le reste sont des magouilles
@@ -78,7 +78,7 @@ namespace CinemaPathe
                 OdbcConnection cnn = new OdbcConnection();
                 OdbcCommand cmd = new OdbcCommand();
                 Boolean existenreg;
-                cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+                cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
                 cnn.Open();
                 cmd.CommandText = "insert into genre values('', ?)";
                 cmd.Parameters.AddWithValue("", TxtBoxNom.Text);
@@ -121,7 +121,7 @@ namespace CinemaPathe
                 OdbcConnection cnn = new OdbcConnection();
                 OdbcCommand cmd = new OdbcCommand();
                 Boolean existenreg;
-                cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+                cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
                 cnn.Open();
                 cmd.CommandText = "delete from genre where libgenre = ?";
                 cmd.Parameters.AddWithValue("", TxtNomSel.Text);
@@ -164,7 +164,7 @@ namespace CinemaPathe
                 OdbcConnection cnn = new OdbcConnection();
                 OdbcCommand cmd = new OdbcCommand();
                 Boolean existenreg;
-                cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcineDESOUSAMARTINS;uid=root;pwd=";
+                cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
                 cnn.Open();
                 cmd.CommandText = "update genre set libgenre= ? where libgenre = ?";
                 cmd.Parameters.AddWithValue("", TxtBoxNom.Text);
