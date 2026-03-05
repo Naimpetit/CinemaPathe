@@ -24,11 +24,9 @@ namespace CinemaPathe
 
         private void Option_Projection_Load(object sender, EventArgs e)
         {
-            Formulaire = null;
             Formulaire2 = null;
             Form1Vis = true;
-            Formulaire = new Form4();
-            Formulaire.Show();
+            checkBox1.Checked = true;   
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

@@ -42,8 +42,6 @@ namespace CinemaPathe
             existenreg = drr.Read();
             while (existenreg == true)
             {
-               // MessageBox.Show(Convert.ToString(drr["noproj"]));
-                //Console.Write(drr["noproj"]);
                 noproj = Convert.ToInt32(drr["noproj"]);
                 ListViewItem lv1 = new ListViewItem(Convert.ToString(drr["nosalle"]), 0);
                 lv1.SubItems.Add(Convert.ToString(drr["dateproj"]));
@@ -147,6 +145,7 @@ namespace CinemaPathe
 
                 OdbcConnection cnn = new OdbcConnection();
                 OdbcCommand cmd = new OdbcCommand();
+
                 Boolean existenreg;
 
                 cnn.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
@@ -159,18 +158,19 @@ namespace CinemaPathe
                 cmd.Parameters.AddWithValue("", nof);
                 cmd.Parameters.AddWithValue("", Convert.ToString(CboSalle.SelectedItem));
                 cmd.Connection = cnn;
+                MessageBox.Show("Ajout effectuer");
+                Task.Delay(10000);
 
                 // Mise a jour de la table "avoirlieu"
 
                 OdbcConnection cnn2 = new OdbcConnection();
                 OdbcCommand cmd2 = new OdbcCommand();
-              
 
                 cnn2.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
                 cnn2.Open();
-                cmd2.CommandText = "insert into avoirlieu values(?,?)";
+                cmd2.CommandText = "insert into avoirlieu values('',?)";
                 cmd2.Parameters.Clear();
-                cmd2.Parameters.AddWithValue("", noproj + 1);
+                //cmd2.Parameters.AddWithValue("", noproj);
                 cmd2.Parameters.AddWithValue("", Convert.ToString(CboSalle.SelectedItem));
                 cmd2.Connection = cnn2;
                 cmd2.ExecuteNonQuery();
@@ -182,9 +182,9 @@ namespace CinemaPathe
 
                 cnn3.ConnectionString = "Driver={MySQL ODBC 8.0 ANSI Driver};SERVER=localhost;Database=bdcinedesousamartins_delachapelle;uid=root;pwd=";
                 cnn3.Open();
-                cmd3.CommandText = "insert into projeter values(?,?)";
+                cmd3.CommandText = "insert into projeter values('',?)";
                 cmd3.Parameters.Clear();
-                cmd3.Parameters.AddWithValue("", noproj + 1);
+              //  cmd3.Parameters.AddWithValue("", noproj);
                 cmd3.Parameters.AddWithValue("", nof);
                 cmd3.Connection = cnn3;
                 cmd3.ExecuteNonQuery();

@@ -108,7 +108,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(379, 127);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(165, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(102, 20);
             this.dateTimePicker1.TabIndex = 20;
             // 
             // label1
@@ -123,7 +123,7 @@
             // pictureBoxFilm
             // 
             this.pictureBoxFilm.Image = global::CinemaPathe.Properties.Resources.logo2;
-            this.pictureBoxFilm.Location = new System.Drawing.Point(588, 16);
+            this.pictureBoxFilm.Location = new System.Drawing.Point(574, 88);
             this.pictureBoxFilm.Name = "pictureBoxFilm";
             this.pictureBoxFilm.Size = new System.Drawing.Size(200, 266);
             this.pictureBoxFilm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,7 +134,7 @@
             // 
             this.TitreTxt.AutoSize = true;
             this.TitreTxt.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitreTxt.Location = new System.Drawing.Point(378, 246);
+            this.TitreTxt.Location = new System.Drawing.Point(379, 249);
             this.TitreTxt.Name = "TitreTxt";
             this.TitreTxt.Size = new System.Drawing.Size(78, 19);
             this.TitreTxt.TabIndex = 24;
@@ -144,7 +144,7 @@
             // 
             this.ReaTxt.AutoSize = true;
             this.ReaTxt.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.ReaTxt.Location = new System.Drawing.Point(379, 284);
+            this.ReaTxt.Location = new System.Drawing.Point(380, 287);
             this.ReaTxt.Name = "ReaTxt";
             this.ReaTxt.Size = new System.Drawing.Size(110, 17);
             this.ReaTxt.TabIndex = 25;
@@ -154,7 +154,7 @@
             // 
             this.DureeTxt.AutoSize = true;
             this.DureeTxt.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.DureeTxt.Location = new System.Drawing.Point(379, 265);
+            this.DureeTxt.Location = new System.Drawing.Point(380, 268);
             this.DureeTxt.Name = "DureeTxt";
             this.DureeTxt.Size = new System.Drawing.Size(77, 17);
             this.DureeTxt.TabIndex = 26;
@@ -187,14 +187,14 @@
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePicker2.Location = new System.Drawing.Point(429, 161);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(115, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(67, 20);
             this.dateTimePicker2.TabIndex = 29;
             // 
             // InfTxt
             // 
             this.InfTxt.AutoSize = true;
             this.InfTxt.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.InfTxt.Location = new System.Drawing.Point(379, 301);
+            this.InfTxt.Location = new System.Drawing.Point(380, 304);
             this.InfTxt.Name = "InfTxt";
             this.InfTxt.Size = new System.Drawing.Size(114, 17);
             this.InfTxt.TabIndex = 30;

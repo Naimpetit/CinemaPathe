@@ -33,24 +33,29 @@
             this.Film = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Salle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Genre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Projection = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnCom = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
+            this.BtnSup = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CboFilms = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Film,
             this.Salle,
             this.Date,
-            this.Genre});
+            this.Projection});
             this.dataGridView1.Location = new System.Drawing.Point(49, 160);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(353, 246);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -58,21 +63,26 @@
             // 
             this.Film.HeaderText = "Film";
             this.Film.Name = "Film";
+            this.Film.ReadOnly = true;
             // 
             // Salle
             // 
             this.Salle.HeaderText = "Salle";
             this.Salle.Name = "Salle";
+            this.Salle.ReadOnly = true;
             // 
             // Date
             // 
             this.Date.HeaderText = "Date";
             this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            this.Date.Width = 150;
             // 
-            // Genre
+            // Projection
             // 
-            this.Genre.HeaderText = "Genre";
-            this.Genre.Name = "Genre";
+            this.Projection.HeaderText = "Projection";
+            this.Projection.Name = "Projection";
+            this.Projection.ReadOnly = true;
             // 
             // label1
             // 
@@ -105,22 +115,48 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(165, 20);
             this.dateTimePicker1.TabIndex = 21;
             // 
-            // label2
+            // BtnSup
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(170, 144);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 13);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Séléctionnez un film";
+            this.BtnSup.AutoSize = true;
+            this.BtnSup.BackColor = System.Drawing.Color.DarkRed;
+            this.BtnSup.ForeColor = System.Drawing.Color.Snow;
+            this.BtnSup.Location = new System.Drawing.Point(309, 418);
+            this.BtnSup.Name = "BtnSup";
+            this.BtnSup.Size = new System.Drawing.Size(114, 23);
+            this.BtnSup.TabIndex = 23;
+            this.BtnSup.Text = "Supprimer Projection";
+            this.BtnSup.UseVisualStyleBackColor = false;
+            this.BtnSup.Click += new System.EventHandler(this.BtnSup_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(59, 421);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(142, 13);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Selectionner une projection :";
+            // 
+            // CboFilms
+            // 
+            this.CboFilms.BackColor = System.Drawing.Color.Goldenrod;
+            this.CboFilms.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CboFilms.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CboFilms.FormattingEnabled = true;
+            this.CboFilms.Location = new System.Drawing.Point(213, 418);
+            this.CboFilms.Name = "CboFilms";
+            this.CboFilms.Size = new System.Drawing.Size(70, 21);
+            this.CboFilms.TabIndex = 33;
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(196)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(460, 450);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(454, 413);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.CboFilms);
+            this.Controls.Add(this.BtnSup);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.BtnCom);
             this.Controls.Add(this.label1);
@@ -139,13 +175,15 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Film;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Salle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Genre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnCom;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Film;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Salle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Projection;
+        private System.Windows.Forms.Button BtnSup;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox CboFilms;
     }
 }
