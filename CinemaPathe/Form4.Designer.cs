@@ -123,9 +123,9 @@
             // pictureBoxFilm
             // 
             this.pictureBoxFilm.Image = global::CinemaPathe.Properties.Resources.logo2;
-            this.pictureBoxFilm.Location = new System.Drawing.Point(550, 49);
+            this.pictureBoxFilm.Location = new System.Drawing.Point(588, 16);
             this.pictureBoxFilm.Name = "pictureBoxFilm";
-            this.pictureBoxFilm.Size = new System.Drawing.Size(197, 197);
+            this.pictureBoxFilm.Size = new System.Drawing.Size(200, 266);
             this.pictureBoxFilm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxFilm.TabIndex = 23;
             this.pictureBoxFilm.TabStop = false;
@@ -134,7 +134,7 @@
             // 
             this.TitreTxt.AutoSize = true;
             this.TitreTxt.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitreTxt.Location = new System.Drawing.Point(546, 249);
+            this.TitreTxt.Location = new System.Drawing.Point(378, 246);
             this.TitreTxt.Name = "TitreTxt";
             this.TitreTxt.Size = new System.Drawing.Size(78, 19);
             this.TitreTxt.TabIndex = 24;
@@ -144,7 +144,7 @@
             // 
             this.ReaTxt.AutoSize = true;
             this.ReaTxt.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.ReaTxt.Location = new System.Drawing.Point(547, 287);
+            this.ReaTxt.Location = new System.Drawing.Point(379, 284);
             this.ReaTxt.Name = "ReaTxt";
             this.ReaTxt.Size = new System.Drawing.Size(110, 17);
             this.ReaTxt.TabIndex = 25;
@@ -154,7 +154,7 @@
             // 
             this.DureeTxt.AutoSize = true;
             this.DureeTxt.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.DureeTxt.Location = new System.Drawing.Point(547, 268);
+            this.DureeTxt.Location = new System.Drawing.Point(379, 265);
             this.DureeTxt.Name = "DureeTxt";
             this.DureeTxt.Size = new System.Drawing.Size(77, 17);
             this.DureeTxt.TabIndex = 26;
@@ -194,7 +194,7 @@
             // 
             this.InfTxt.AutoSize = true;
             this.InfTxt.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.InfTxt.Location = new System.Drawing.Point(547, 304);
+            this.InfTxt.Location = new System.Drawing.Point(379, 301);
             this.InfTxt.Name = "InfTxt";
             this.InfTxt.Size = new System.Drawing.Size(114, 17);
             this.InfTxt.TabIndex = 30;
